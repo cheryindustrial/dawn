@@ -1,0 +1,21 @@
+<h2>Hello World!</h2>
+<p>I will be a timer one day!</p>
+<p>
+  {{ section.settings.message }}
+  <span>{{ section.settings.date | date: '%B %d, %Y' }}</span>
+</p>
+
+{% schema %}
+{
+  "name": "Timer",
+  "presets": [
+    {
+      "name": "Timer"
+    }
+  ],
+  "settings": [
+    { "type": "text", "id": "message", "label": "Message" },
+    { "type": "text", "id": "date", "label": "Date" }
+  ]
+}
+{% endschema %}
